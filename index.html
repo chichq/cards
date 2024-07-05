@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="welcome-screen">
+        <h1>Qual o número da sorte da sua cantora favorita?!</h1>
+        
+        <form id="accessForm">
+            <input type="number" id="accessCode" name="accessCode" placeholder="Digite o número">
+            <button type="submit">Enviar</button>
+        </form>
+        <p class="warning-text">fico meio bagunçado porque eu tava com sono e preguiçakkk .</p>
+    </div>
+
+    <script>
+        document.getElementById('accessForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            // Obtém o valor digitado no campo
+            let accessCode = document.getElementById('accessCode').value;
+
+            // Verifica se o código de acesso é válido (exemplo simples)
+            if (accessCode === '13') { // Substitua '1234' pelo código desejado
+                // Redireciona para a página do slider
+                window.location.href = 'slider.html';
+            } else {
+                alert('Número incorreto! Tente novamente.'); // Exibe um alerta de código incorreto
+            }
+        });
+    </script>
+</body>
+</html>

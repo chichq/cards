@@ -1,0 +1,122 @@
+/* Estilos para o corpo da página */
+body {
+    background-image: linear-gradient(to top right, #8B5CF6, #EC4899);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+/* Estilos para a tela de boas-vindas */
+.welcome-screen {
+    text-align: center;
+    margin-top: 50px; /* Ajuste conforme necessário */
+    color: #fff;
+}
+
+.welcome-screen h1 {
+    font-size: 2em;
+}
+
+.welcome-screen p {
+    font-size: 1.2em;
+}
+
+.welcome-screen form {
+    margin-top: 20px;
+}
+
+.welcome-screen input[type="number"] {
+    padding: 10px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.welcome-screen button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #fff;
+    color: #8B5CF6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.welcome-screen button:hover {
+    background-color: #EC4899;
+    color: #fff;
+}
+
+/* Estilos para o slider */
+.slider {
+    position: relative;
+    margin-top: 20px; /* Ajuste conforme necessário */
+    width: 100%;
+    max-width: 800px;
+    height: 370px;
+    overflow: hidden;
+    display: block; /* Garante que o slider seja visível quando mostrado */
+}
+
+.slider .item {
+    position: absolute;
+    width: 80%;
+    max-width: 200px;
+    height: 320px;
+    text-align: justify;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 110px);
+    top: 0;
+}
+
+.slider #next,
+.slider #prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.slider #next {
+    right: 10px;
+}
+
+.slider #prev {
+    left: 10px;
+}
+
+.slider #prev:hover,
+.slider #next:hover {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .slider .item {
+        width: 90%;
+        max-width: 150px;
+        height: auto;
+        padding: 15px;
+        
+    }
+
+    .slider #prev,
+    .slider #next {
+        font-size: xx-large;
+    }
+}
